@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dharshini — The Series</title>
+<meta name="description" content="Uribindi Dharshini — CSE student, AI & Full-Stack developer. A cinematic, streaming-inspired portfolio.">
+<meta name="theme-color" content="#07070a">
+<meta property="og:title" content="Dharshini — The Series">
+<meta property="og:description" content="AI • Full-Stack • Java. Every project is an Original.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%23e5222b%22/><text x=%2250%22 y=%2276%22 font-size=%2272%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Impact,sans-serif%22>D</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07070a;--bg2:#0e0e14;--card:#14141c;--text:#f3f2f7;--muted:#a09fb2;--line:#25252f;--red:#e5222b;--red2:#ff4d55;
+  --disp:'Bebas Neue',Impact,'Arial Narrow',sans-serif;--serif:'Instrument Serif',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  color-scheme:dark;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+/* nav */
+.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .3s}
+.nav.solid{background:rgba(7,7,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{font-family:var(--disp);font-size:30px;letter-spacing:.04em;color:var(--red)}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav a.l{color:var(--muted);font-size:14px;white-space:nowrap}
+.nav a.l:hover{color:var(--text)}
+.nav .cta{margin-left:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:6px;font-weight:600;font-size:16px;border:0;cursor:pointer;font-family:var(--sans)}
+.btn.w{background:#fff;color:#000}
+.btn.g{background:rgba(120,120,140,.35);color:#fff}
+.btn.r{background:var(--red);color:#fff}
+.btn:hover{filter:brightness(.88)}
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden;
+  background:radial-gradient(900px 520px at 78% 38%,rgba(229,34,43,.28),transparent 62%),radial-gradient(700px 500px at 15% 90%,rgba(90,70,200,.22),transparent 60%),var(--bg)}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,var(--bg))}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .8fr;gap:30px;align-items:center;width:100%}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.mono-wrap{order:-1}}
+.tag{font-size:13px;letter-spacing:.3em;color:var(--red2);font-weight:600}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(64px,13vw,170px);line-height:.88;margin:14px 0 18px;letter-spacing:.01em}
+h1 em{display:block;font-family:var(--serif);font-style:italic;font-size:.34em;letter-spacing:0;color:var(--muted);margin-top:10px}
+.meta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:14px;color:var(--muted);margin-bottom:18px}
+.meta b{color:#46d369;font-weight:600}
+.meta .age{border:1px solid var(--muted);padding:0 7px;font-size:12px}
+.hero p.syn{max-width:560px;font-size:18px;color:#d6d5e0;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.mono-wrap{display:flex;justify-content:center}
+.mono{width:min(320px,70vw);aspect-ratio:3/4;border-radius:10px;background:linear-gradient(160deg,#2a1020,#7a1218 55%,#e5222b);display:grid;place-items:center;box-shadow:0 30px 80px rgba(229,34,43,.3);position:relative;overflow:hidden}
+.mono img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}.mono::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.6),transparent 22%,transparent 68%,rgba(0,0,0,.75))}
+.mono small{z-index:2;position:absolute;bottom:14px;left:16px;font-size:11px;letter-spacing:.25em;color:rgba(255,255,255,.7)}
+.mono::before{z-index:2;content:"ORIGINAL";position:absolute;top:14px;left:16px;font-size:11px;letter-spacing:.25em;color:#fff;font-weight:700}
+/* rows */
+.row{padding:34px 0 8px}
+.row h2{font-family:var(--disp);font-weight:400;font-size:clamp(26px,4vw,36px);letter-spacing:.04em;margin:0 0 14px}
+.row h2 i{font-family:var(--serif);font-size:.6em;color:var(--muted);margin-left:10px;letter-spacing:0}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 24px 26px;margin:0 -24px;scrollbar-width:thin;scrollbar-color:#333 transparent}
+.poster{flex:0 0 auto;width:250px;aspect-ratio:2/3;border-radius:8px;position:relative;overflow:hidden;cursor:pointer;scroll-snap-align:start;border:1px solid var(--line);transition:transform .25s,box-shadow .25s;text-align:left;color:#fff;padding:0;font-family:var(--sans)}
+.poster:hover,.poster:focus-visible{transform:scale(1.05);box-shadow:0 18px 40px rgba(0,0,0,.6);z-index:3;outline:none}
+.poster .bg{position:absolute;inset:0}
+.poster .em{position:absolute;top:20%;left:0;right:0;text-align:center;font-size:72px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4))}
+.poster .shade{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.92))}
+.poster .ot{position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:.22em;font-weight:700}
+.poster .ot::before{content:"N";color:var(--red);font-family:var(--disp);font-size:16px;margin-right:6px}
+.poster .cap{position:absolute;left:14px;right:14px;bottom:14px}
+.poster .cap h3{font-family:var(--disp);font-weight:400;font-size:28px;line-height:1;margin:0 0 6px;letter-spacing:.03em}
+.poster .cap p{margin:0;font-size:12px;color:#cfcfda}
+.poster.wide{width:340px;aspect-ratio:16/10}
+.poster.wide .em{top:14%;font-size:60px}
+/* genres */
+.genres{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;padding-bottom:20px}
+.g-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px}
+.g-card h3{font-family:var(--disp);font-weight:400;font-size:22px;letter-spacing:.05em;margin:0 0 12px;color:var(--red2)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{background:#1d1d27;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13px;color:#d6d5e0}
+/* top list */
+.top{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;padding-bottom:20px}
+.tp{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 20px 18px 8px}
+.tp b{font-family:var(--disp);font-weight:400;font-size:120px;line-height:.8;color:transparent;-webkit-text-stroke:3px #555;min-width:78px;text-align:center}
+.tp h3{margin:0 0 4px;font-size:16px}.tp p{margin:0;font-size:13.5px;color:var(--muted)}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;padding-bottom:20px}
+.cert{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:8px;padding:18px 20px}
+.cert h3{margin:0 0 4px;font-size:17px}.cert p{margin:0;color:var(--muted);font-size:14px}
+/* contact */
+.cta-sec{padding:90px 0 70px;text-align:center;background:radial-gradient(700px 300px at 50% 0,rgba(229,34,43,.22),transparent 70%)}
+.cta-sec h2{font-family:var(--disp);font-weight:400;font-size:clamp(46px,9vw,110px);line-height:.92;margin:0 0 10px}
+.cta-sec p{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--muted);margin:0 0 28px}
+.cta-sec .btns{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 24px 40px;text-align:center;color:var(--muted);font-size:13px}
+/* modal */
+dialog{border:0;padding:0;background:transparent;color:var(--text);max-width:min(720px,94vw);width:100%;margin:auto;overflow:visible}
+dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
+.m{background:var(--bg2);border-radius:12px;overflow:hidden;border:1px solid var(--line);max-height:88vh;overflow-y:auto}
+.m .top-img{height:200px;position:relative;display:grid;place-items:center;font-size:84px}
+.m .top-img::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,var(--bg2))}
+.m .body{padding:6px 28px 30px}
+.m h3{font-family:var(--disp);font-weight:400;font-size:44px;line-height:1;margin:0 0 8px;letter-spacing:.03em}
+.m .mt{font-size:14px;color:var(--muted);margin-bottom:14px}.m .mt b{color:#46d369}
+.m ul{padding-left:20px;margin:0 0 16px}.m li{margin:8px 0;color:#d6d5e0}
+.x{position:absolute;top:12px;right:12px;z-index:3;width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.7);color:#fff;font-size:20px;cursor:pointer}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:700px){.nav ul{display:none}.poster{width:210px}.poster.wide{width:290px}.tp b{font-size:96px;min-width:62px}}
+</style>
+</head>
+<body>
+<header class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="#top">DHARSHINI</a>
+  <ul><li><a class="l" href="#originals">Originals</a></li><li><a class="l" href="#experience">Experience</a></li><li><a class="l" href="#genres">Skills</a></li><li><a class="l" href="#top10">Achievements</a></li><li><a class="l" href="#certs">Certifications</a></li></ul>
+  <a class="btn r cta" href="#contact">Hire Me</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="tag">A PORTFOLIO ORIGINAL SERIES</div>
+    <h1>Dharshini<em>Every project is an Original.</em></h1>
+    <div class="meta"><b>9.11 CGPA</b><span class="yr">2026</span><span class="age">CSE</span><span>AI · Full-Stack · Java</span></div>
+    <p class="syn">Uribindi Dharshini is a final-year Computer Science and Engineering student from Bengaluru who builds AI-powered applications, from legal-document assistants to learning platforms for children with special needs.</p>
+    <div class="btns"><a class="btn w" href="#originals">▶ Play Projects</a><a class="btn g" href="#contact">＋ Get In Touch</a></div>
+  </div>
+  <div class="mono-wrap"><div class="mono"><img src="assets/portrait.jpg" alt="Portrait of Uribindi Dharshini" width="600" height="800" fetchpriority="high"><small>CLASS OF 2027</small></div></div>
+</div></section>
+
+<div class="wrap">
+  <section class="row rv" id="originals"><h2>Portfolio Originals <i>Projects</i></h2><div class="rail" id="projRail"></div></section>
+  <section class="row rv" id="experience"><h2>Continue Watching <i>Experience</i></h2><div class="rail" id="expRail"></div></section>
+  <section class="row rv" id="genres"><h2>Browse by Genre <i>Skills</i></h2>
+    <div class="genres">
+      <div class="g-card"><h3>Languages</h3><div class="chips"><span>Java</span><span>Python</span><span>SQL</span><span>C</span></div></div>
+      <div class="g-card"><h3>Full-Stack &amp; APIs</h3><div class="chips"><span>FastAPI</span><span>REST APIs</span><span>React</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>Tailwind CSS</span></div></div>
+      <div class="g-card"><h3>AI &amp; Machine Learning</h3><div class="chips"><span>RAG</span><span>LLMs</span><span>NLP</span><span>LangChain</span><span>Sentence-Transformers</span><span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>Pandas</span><span>NumPy</span><span>Data Preprocessing</span><span>Model Evaluation</span></div></div>
+      <div class="g-card"><h3>Databases &amp; Cloud</h3><div class="chips"><span>MySQL</span><span>MongoDB</span><span>AWS (Basics)</span><span>Google Cloud</span></div></div>
+      <div class="g-card"><h3>Tools</h3><div class="chips"><span>GitHub</span><span>VS Code</span><span>Jupyter</span><span>XAMPP</span><span>Raspberry Pi</span><span>Arduino</span></div></div>
+      <div class="g-card"><h3>Core Concepts</h3><div class="chips"><span>Data Structures</span><span>Problem Solving</span></div></div>
+    </div>
+  </section>
+  <section class="row rv" id="top10"><h2>Top Achievements <i>Recognition</i></h2>
+    <div class="top">
+      <div class="tp"><b>1</b><div><h3>Top 70 Project Selection</h3><p>Innovative Project Expo 2024, Presidency University</p></div></div>
+      <div class="tp"><b>2</b><div><h3>Build with AI Hackathon</h3><p>Innovatex 4.0 International Tech Fest</p></div></div>
+      <div class="tp"><b>3</b><div><h3>Build with TRAE Hackathon</h3><p>Participation certificate</p></div></div>
+    </div>
+  </section>
+  <section class="row rv" id="certs"><h2>Certifications <i>Credentials</i></h2>
+    <div class="certs">
+      <div class="cert"><h3>Oracle Cloud Infrastructure 2025</h3><p>Certified Generative AI Professional &amp; AI Foundations Associate · Oracle University · Oct 2025</p></div>
+      <div class="cert"><h3>AI &amp; Machine Learning Internship</h3><p>Completion certificate · Elevate Labs</p></div>
+      <div class="cert"><h3>B.Tech, Computer Science &amp; Engineering</h3><p>Presidency University, Bengaluru · 2023 – 2027 · CGPA 9.11</p></div>
+    </div>
+  </section>
+</div>
+
+<section class="cta-sec rv" id="contact"><div class="wrap">
+  <h2>Ready for the<br>next season?</h2>
+  <p>Open to Software Engineer opportunities.</p>
+  <div class="btns">
+    <a class="btn r" href="mailto:mailmeuribindidharshini@gmail.com">✉ Send Email</a>
+    <a class="btn g" href="https://www.linkedin.com/in/dharshini-u-44a5412a4" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn g" href="https://github.com/Dha11rshini" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></section>
+</main>
+<footer>Designed &amp; built by Uribindi Dharshini · Bengaluru · <span class="yr">2026</span></footer>
+
+<dialog id="dlg"><div class="m"><button class="x" id="x" aria-label="Close">✕</button><div class="top-img" id="dImg"></div><div class="body"><h3 id="dT"></h3><div class="mt" id="dM"></div><ul id="dL"></ul><div class="chips" id="dC"></div></div></div></dialog>
+
+<script>
+(function(){
+var P=[
+{t:"Legal Documentation Assistant",e:"⚖️",y:"2026",g:"AI · Full-Stack",c:"linear-gradient(160deg,#1b1146,#4a2bd1)",
+ l:["Developed a full-stack AI application to simplify complex legal documents into plain-language summaries.","Implemented document summarization, legal clause extraction, risk detection, and document-based Q&A to help users understand important contractual terms.","Integrated a React frontend with FastAPI, Node.js, and MongoDB for legal document processing and analysis."],
+ k:["NLP","LLM","FastAPI","React","Node.js","MongoDB","Tailwind CSS"]},
+{t:"Bright Minds",e:"🧠",y:"2024",g:"AI · Hardware · Top 70",c:"linear-gradient(160deg,#2a0a1a,#d6336c)",
+ l:["Designed an AI-based learning platform on Raspberry Pi to support children with special learning needs.","Created adaptive learning modules that personalize content to individual learners.","Collaborated on adaptive courses and AI assessments, sharing progress and design decisions in reviews.","Selected among the Top 70 projects at Innovative Project Expo 2024."],
+ k:["Raspberry Pi","AI"]},
+{t:"Face Mask Detection",e:"😷",y:"2025",g:"Computer Vision",c:"linear-gradient(160deg,#04222b,#0aa6a6)",
+ l:["Built a real-time system that classifies masked vs. unmasked faces from live webcam and image input using a CNN.","Trained on a ~3,000-image dataset with resizing, normalization, and data augmentation.","Evaluated with accuracy, precision, and recall; iterated to reduce misclassification on low-light and partially occluded faces."],
+ k:["Python","OpenCV","TensorFlow","Keras"]},
+{t:"Robot Eye Movement Using Sound",e:"👁️",y:"2023",g:"Embedded · Robotics",c:"linear-gradient(160deg,#241800,#e08a00)",
+ l:["Designed and developed a robotic system that simulates eye movement based on sound direction.","Implemented real-time sound detection and processing using C and Arduino."],
+ k:["C","Arduino"]}
+];
+var X=[{t:"AI & Machine Learning Intern",e:"🎬",y:"Jun – Jul 2025",g:"Elevate Labs",c:"linear-gradient(160deg,#0b1f3a,#2a6fdb)",w:1,
+ l:["Built a real-time Face Mask Detection system in Python using OpenCV and a CNN model (TensorFlow/Keras) for live webcam and image input.","Curated and preprocessed a labeled image dataset (~3,000 images) with resizing, normalization, and data augmentation to improve generalization.","Cleaned and explored structured datasets with Pandas and NumPy, handling missing values and inconsistent records.","Evaluated models using accuracy, precision, and recall, iterating to reduce misclassification on low-light and partially occluded faces.","Documented experiments and results in Jupyter Notebook and uploaded project code to GitHub, maintaining organized files and tracking code changes through version control."],
+ k:["Python","OpenCV","TensorFlow/Keras","Pandas","NumPy","Jupyter"]}];
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function build(id,arr){var r=document.getElementById(id);arr.forEach(function(p,i){
+ var b=document.createElement("button");b.className="poster"+(p.w?" wide":"");b.setAttribute("aria-label","Open "+p.t);
+ b.innerHTML='<div class="bg" style="background:'+p.c+'"></div><div class="em">'+p.e+'</div><div class="shade"></div><div class="ot">ORIGINAL</div><div class="cap"><h3>'+esc(p.t)+'</h3><p>'+esc(p.y)+' · '+esc(p.g)+'</p></div>';
+ b.addEventListener("click",function(){open(p)});r.appendChild(b)})}
+var d=document.getElementById("dlg");
+function open(p){document.getElementById("dImg").style.background=p.c;document.getElementById("dImg").textContent=p.e;
+ document.getElementById("dT").textContent=p.t;document.getElementById("dM").innerHTML="<b>"+esc(p.y)+"</b> · "+esc(p.g);
+ document.getElementById("dL").innerHTML=p.l.map(function(x){return"<li>"+esc(x)+"</li>"}).join("");
+ document.getElementById("dC").innerHTML=p.k.map(function(x){return"<span>"+esc(x)+"</span>"}).join("");
+ if(d.showModal)d.showModal();else d.setAttribute("open","")}
+document.getElementById("x").addEventListener("click",function(){d.close()});
+d.addEventListener("click",function(e){if(e.target===d)d.close()});
+build("projRail",P);build("expRail",X);
+var y=new Date().getFullYear();document.querySelectorAll(".yr").forEach(function(e){e.textContent=y});
+var nav=document.getElementById("nav");function sc(){nav.classList.toggle("solid",window.scrollY>40)}sc();window.addEventListener("scroll",sc,{passive:true});
+var io=("IntersectionObserver"in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08}):null;
+document.querySelectorAll(".rv").forEach(function(el){io?io.observe(el):el.classList.add("in")});
+})();
+</script>
+</body>
+</html>
